@@ -1,6 +1,14 @@
-const getBaseUrl = () => {
+// const getBaseUrl = () => {
+//     return `${process.env.PROTOCOL}://${process.env.HOST}:${process.env.PORT}`;
+//   };
+
+const getBaseUrl = (req) => {
+  if (process.env.NODE_ENV === 'production') {
+    return `https://backend-afjq.onrender.com`; 
+  } else {
     return `${process.env.PROTOCOL}://${process.env.HOST}:${process.env.PORT}`;
-  };
+  }
+};
 
 
 
